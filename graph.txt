@@ -1,0 +1,21 @@
+ graph -T png timedata.txt > graph.png
+ explorer.exe graph.png
+graph -T X timedata.txt
+
+sudo apt update
+sudo apt install plotutils
+graph -T X -x "Input Size" -y "Time Taken" timedata.txt
+graph -T X -L "Merge Sort Time vs Input Size" -X "Input Size" -Y "Time Taken" timedata.txt
+
+
+
+graph -T png \
+-g 3 \
+-L "Time Taken vs Input Size" \
+-X "Input Size (n)" \
+-Y "Time Taken (sec)" \
+timedata.txt > merge.png
+
+xdg-open merge.png
+
+.
