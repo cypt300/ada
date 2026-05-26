@@ -1,9 +1,9 @@
-1 * B
+
 
 #include <stdio.h>
 #include <time.h>
 
-    int checkUnique(int arr[], int n)
+int checkUnique(int arr[], int n)
 {
     int i, j;
 
