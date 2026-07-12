@@ -1,34 +1,34 @@
-o2
+// 2 First Bad Version
 
-278. First Bad Version
+#include <stdio.h>
 
+int bad = 4;
 
-
-#include<stdio.h>
-
-int bad=4;
-
-int isBadVersion(int x){
-    return x>=bad;
+int isBadVersion(int x)
+{
+    return x >= bad;
 }
 
-int firstBadVersion(int n){
-    int l=1,r=n;
+int firstBadVersion(int n)
+{
+    int l = 1, r = n;
 
-    while(l<r){
-        int m=l+(r-l)/2;
+    while (l < r)
+    {
+        int m = l + (r - l) / 2;
 
-        if(isBadVersion(m))
-            r=m;
+        if (isBadVersion(m))
+            r = m;
         else
-            l=m+1;
+            l = m + 1;
     }
 
     return l;
 }
 
-int main(){
-    printf("%d",firstBadVersion(5));
+int main()
+{
+    printf("%d", firstBadVersion(5));
 
     return 0;
 }
